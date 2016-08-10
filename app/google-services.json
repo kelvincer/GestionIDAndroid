@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "104635752467",
+    "firebase_url": "https://gespresso-44430.firebaseio.com",
+    "project_id": "gespresso-44430",
+    "storage_bucket": "gespresso-44430.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104635752467:android:2acea0008aea0f34",
+        "android_client_info": {
+          "package_name": "com.eeec.GestionEspresso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104635752467-beq1jrl057dl1ovmk02mkeejlqcm2tan.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw7kkHUAETqooozTxFjFdd20PUu1cH1fk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

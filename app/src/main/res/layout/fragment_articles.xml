@@ -1,0 +1,204 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    tools:context=".fragments.ArticleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/multimediaHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/videoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone">
+                <VideoView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/imageVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/playButton"
+                    android:background="@color/fabBackground"
+                    android:src="@drawable/play_button"
+                    android:visibility="invisible"
+                    android:scaleType="centerInside"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    android:layout_alignBottom="@+id/image"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nextNoteButton"
+                android:src="@drawable/next_button"
+                android:background="@color/fabBackground"
+                android:adjustViewBounds="false"
+                android:visibility="visible"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:cropToPadding="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-12dp"
+                android:layout_marginRight="-40dp" />
+
+
+        </RelativeLayout>
+
+
+        <com.eeec.GestionEspresso.views.KTextView
+            android:id="@+id/articleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="@dimen/row_vertical_margin"
+            android:paddingLeft="@dimen/row_horizontal_margin"
+            android:paddingRight="@dimen/row_horizontal_margin"
+            android:paddingTop="@dimen/row_vertical_margin"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:customFont="fonts/georgia.ttf" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D2D2D2"
+            android:paddingBottom="@dimen/row_vertical_margin"
+            android:paddingEnd="@dimen/row_horizontal_margin"
+            android:paddingLeft="@dimen/row_horizontal_margin"
+            android:paddingRight="@dimen/row_horizontal_margin"
+            android:paddingStart="@dimen/row_horizontal_margin"
+            android:paddingTop="@dimen/row_vertical_margin">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/categoryIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <com.eeec.GestionEspresso.views.KTextView
+                android:id="@+id/categoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/categoryIcon"
+                android:layout_toRightOf="@+id/categoryIcon"
+                android:textColor="@color/darkText"
+                android:textSize="20sp"
+                app:customFont="fonts/garamondb.ttf" />
+
+            <com.eeec.GestionEspresso.views.KTextView
+                android:id="@+id/articleDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/categoryName"
+                android:layout_toRightOf="@+id/categoryName"
+                android:gravity="end"
+                android:textColor="@color/lightText"
+                android:textSize="14sp"
+                app:customFont="fonts/arial.ttf" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/contentWebView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:id="@+id/shareLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/share_icon_dark" />
+
+            <com.eeec.GestionEspresso.views.KTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compartir"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:customFont="fonts/garamondb.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sliceTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.eeec.GestionEspresso.views.KTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/backgroundColor"
+                android:textSize="16sp"
+                android:inputType="textCapWords"
+                android:text="@string/footer_note_text"
+                app:customFont="fonts/georgia.ttf" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

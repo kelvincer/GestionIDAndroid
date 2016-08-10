@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="#D2D2D2">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/categoryImage"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="@dimen/row_vertical_margin"
+        android:layout_marginBottom="@dimen/row_vertical_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/row_horizontal_margin"
+        android:layout_marginStart="@dimen/row_horizontal_margin"
+        />
+
+    <com.eeec.GestionEspresso.views.KTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/row_category_font"
+        android:textColor="@color/darkText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/categoryImage"
+        android:layout_toEndOf="@+id/categoryImage"
+        android:layout_marginTop="@dimen/row_vertical_margin"
+        android:layout_marginBottom="@dimen/row_vertical_margin"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/row_horizontal_margin"
+        android:layout_marginRight="@dimen/row_horizontal_margin"
+        app:customFont="fonts/garamondb.ttf"/>
+
+</RelativeLayout>

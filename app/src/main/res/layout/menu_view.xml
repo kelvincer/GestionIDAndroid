@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/row_horizontal_margin"
+    android:paddingRight="@dimen/row_horizontal_margin">
+
+    <include layout="@layout/nav_header_home" />
+
+    <com.eeec.GestionEspresso.views.KTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Ediciones de la semana"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:customFont="fonts/georgia.ttf" />
+
+    <LinearLayout
+        android:id="@+id/calendarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSoftDark"
+        android:orientation="horizontal"
+        android:weightSum="5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <com.eeec.GestionEspresso.views.KTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opciones"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:customFont="fonts/georgia.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSoftDark" />
+
+    <LinearLayout
+        android:id="@+id/menuComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="30dp">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mail_icon" />
+
+        <com.eeec.GestionEspresso.views.KTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Envíanos tus comentarios"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            app:customFont="fonts/georgia.ttf" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSoftDark" />
+
+    <LinearLayout
+        android:id="@+id/menuShare"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share_icon" />
+
+        <com.eeec.GestionEspresso.views.KTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Comparte la Aplicación"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            app:customFont="fonts/georgia.ttf"
+            android:minHeight="30dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSoftDark" />
+
+
+    <LinearLayout
+        android:id="@+id/menuTerms"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/terms_icon"
+            />
+
+        <com.eeec.GestionEspresso.views.KTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Términos de uso"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            app:customFont="fonts/georgia.ttf"
+            android:minHeight="30dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorSoftDark" />
+
+
+</LinearLayout>

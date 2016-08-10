@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="colorPrimary">#B70320</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#E0BC5C</color>
+    <color name="colorSoftDark">#464646</color>
+    <color name="darkText">#333333</color>
+    <color name="lightText">#9f9f9f</color>
+    <color name="overlay">#dd000000</color>
+    <color name="tutorialText">#FFFFFF</color>
+    <color name="fabBackground">#00000000</color>
+</resources>
+
